@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CTASection({
   title = "获取俄罗斯市场方案",
@@ -22,13 +22,13 @@ export default function CTASection({
             <Send className="h-5 w-5" />
             联系我们
           </Link>
-          <Link
-            to={secondaryTo}
+          <a
+            href={secondaryTo}
             className="inline-flex items-center justify-center gap-2 rounded border border-white/18 px-5 py-3 font-semibold text-white transition hover:bg-white/8"
           >
             {secondaryLabel}
             <ArrowRight className="h-5 w-5" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

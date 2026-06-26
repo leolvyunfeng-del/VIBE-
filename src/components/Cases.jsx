@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { caseSummaries } from "../data/caseData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
@@ -13,13 +13,6 @@ export default function Cases() {
             title="案例展示"
             description="围绕不同品类与增长目标，组合达人内容、平台投放、媒体传播和线下曝光，帮助品牌在俄罗斯市场形成可感知的声量。"
           />
-          <Link
-            to="/cases/consumer-electronics"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-ember"
-          >
-            查看案例详情
-            <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
 
         <div className="mt-14 flex gap-5 overflow-x-auto pb-4">
