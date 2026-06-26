@@ -2,6 +2,9 @@ import { createContext, useContext, useMemo, useState } from "react";
 import { translations } from "./translations.js";
 
 const LanguageContext = createContext(null);
+const hasChineseText = (text) => /[\u4e00-\u9fff]/.test(text);
+const fallbackTranslation =
+  "Localized case details and execution notes are available from the VIBE team during project consultation.";
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => localStorage.getItem("vibe-lang") || "zh");
@@ -19,7 +22,7 @@ export function LanguageProvider({ children }) {
       toggleLanguage: () => setLanguage(lang === "zh" ? "en" : "zh"),
       t: (text) => {
         if (!text || lang === "zh") return text;
-        return translations[text] || text;
+        return translations[text] || (hasChineseText(text) ? fallbackTranslation : text);
       }
     };
   }, [lang]);

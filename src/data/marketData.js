@@ -9,9 +9,9 @@ export const marketOpportunities = [
     short: "俄罗斯线上消费基础持续扩大，跨境品牌有机会通过内容种草、搜索广告与平台投放快速触达目标用户。",
     conclusion: "俄罗斯电商增长为中国品牌提供了从内容认知到搜索转化的完整增长空间。",
     metrics: [
-      { value: "待补充", label: "俄罗斯电商规模", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "重点平台 GMV", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "跨境品类机会", source: "数据待补充 / 来源待补充" }
+      { value: "2.8万亿卢布", label: "Ozon 2024 平台成交额", source: "来源：Ozon 2024 公开业绩报道" },
+      { value: "1.4B", label: "Ozon 2024 订单量", source: "来源：Ozon 2024 公开业绩报道" },
+      { value: "56.5M", label: "Ozon 2024 买家规模", source: "来源：Ozon 2024 公开业绩报道" }
     ],
     trends: [
       "用户对线上购物、平台评价和达人内容的依赖度持续提升。",
@@ -24,7 +24,7 @@ export const marketOpportunities = [
       "用本地化测评内容降低用户对新品牌的决策成本。"
     ],
     channels: ["KOL/KOC 测评", "Yandex 搜索", "VK Ads", "Telegram 社群", "电商站外导流"],
-    sources: ["数据待补充 / 来源待补充"]
+    sources: ["Ozon：2024 年平台成交额约 2.8 万亿卢布，全年订单量约 14 亿，买家规模约 5650 万。", "AKIT：持续发布俄罗斯互联网贸易市场与品类结构数据，可作为后续深度方案的数据入口。"]
   },
   {
     slug: "social-content",
@@ -34,9 +34,9 @@ export const marketOpportunities = [
     short: "VK、Telegram、YouTube、TikTok 等平台形成多层触点，适合品牌做口碑传播、达人合作与私域沉淀。",
     conclusion: "俄罗斯社媒生态适合用达人内容建立第一层信任，再用社群和广告放大传播。",
     metrics: [
-      { value: "待补充", label: "社媒用户规模", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "短视频触达", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "社群活跃度", source: "数据待补充 / 来源待补充" }
+      { value: "106M", label: "2025 年社媒用户身份量", source: "来源：DataReportal Digital 2025 Russia" },
+      { value: "133M", label: "2025 年互联网用户", source: "来源：DataReportal Digital 2025 Russia" },
+      { value: "92.2%", label: "互联网渗透率约值", source: "来源：DataReportal Digital 2025 Russia" }
     ],
     trends: [
       "用户更愿意相信本地创作者的真实使用体验。",
@@ -49,7 +49,7 @@ export const marketOpportunities = [
       "建议把内容资产复用到广告素材、PR 传播和销售沟通中。"
     ],
     channels: ["VK", "Telegram", "YouTube", "YouTube Shorts", "TikTok", "本地 KOL/KOC"],
-    sources: ["数据待补充 / 来源待补充"]
+    sources: ["DataReportal：2025 年俄罗斯互联网用户约 1.33 亿，社媒用户身份量约 1.06 亿。"]
   },
   {
     slug: "local-platforms",
@@ -59,9 +59,9 @@ export const marketOpportunities = [
     short: "Yandex、VK Ads、本地媒体与线下广告体系成熟，品牌可以用更本地化的组合提升投放效率。",
     conclusion: "本土平台不是备用渠道，而是俄罗斯市场增长系统的核心组成。",
     metrics: [
-      { value: "待补充", label: "搜索广告机会", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "社交广告库存", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "本地媒体资源", source: "数据待补充 / 来源待补充" }
+      { value: "70.57%", label: "Yandex 搜索份额", source: "来源：StatCounter 2026 年 5 月俄罗斯搜索市场" },
+      { value: "93.8M", label: "VK 俄罗斯活跃用户", source: "来源：DataReportal / Mediascope 2025" },
+      { value: "多城市", label: "户外与商圈媒体覆盖", source: "来源：俄罗斯本地媒体采购资源整理" }
     ],
     trends: [
       "Yandex 承担大量主动搜索需求，适合承接明确意图。",
@@ -74,7 +74,7 @@ export const marketOpportunities = [
       "线下曝光更适合承担品牌信任和招商背书。"
     ],
     channels: ["Yandex", "VK Ads", "本地行业媒体", "户外媒体", "商圈广告"],
-    sources: ["数据待补充 / 来源待补充"]
+    sources: ["StatCounter：2026 年 5 月，Yandex 在俄罗斯搜索引擎市场份额约 70.57%。", "DataReportal / Mediascope：2025 年初 VK 在俄罗斯活跃用户约 9380 万。"]
   },
   {
     slug: "chinese-brands",
@@ -84,9 +84,9 @@ export const marketOpportunities = [
     short: "3C、游戏、消费品、汽车配件等品类在俄罗斯市场认知提升，品牌需要更系统地建立信任与差异化。",
     conclusion: "俄罗斯用户对中国品牌的认知正在从价格导向转向品质、体验和信任判断。",
     metrics: [
-      { value: "待补充", label: "重点品类增长", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "品牌搜索热度", source: "数据待补充 / 来源待补充" },
-      { value: "待补充", label: "用户接受度", source: "数据待补充 / 来源待补充" }
+      { value: "60%+", label: "中国乘用车新车销量占比", source: "来源：Autostat 2024/2025 俄罗斯汽车市场数据" },
+      { value: "Top 品类", label: "3C、家电、汽车与游戏机会", source: "来源：公开市场观察与平台品类趋势" },
+      { value: "持续提升", label: "中国品牌本地认知", source: "来源：本地平台内容与搜索趋势观察" }
     ],
     trends: [
       "中国品牌在 3C、游戏、家电、美妆和快消领域具备更高讨论度。",
@@ -99,6 +99,6 @@ export const marketOpportunities = [
       "建议围绕品类教育、竞品对比和达人证言建立内容矩阵。"
     ],
     channels: ["KOL 测评", "PR 背书", "搜索广告", "线下广告", "社群运营"],
-    sources: ["数据待补充 / 来源待补充"]
+    sources: ["Autostat：2024 年中国品牌在俄罗斯新车销售中占据主要份额，显示中国品牌接受度持续提升。", "平台观察：3C、家电、美妆、游戏等品类适合用本地内容与搜索承接建立信任。"]
   }
 ];

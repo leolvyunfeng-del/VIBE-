@@ -1,7 +1,10 @@
 import { methodology } from "../data/content.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Methodology() {
+  const { t } = useLanguage();
+
   return (
     <section id="method" className="bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -31,8 +34,8 @@ export default function Methodology() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-ember">0{index + 1}</p>
-                      <h3 className="mt-1 text-xl font-semibold text-ink">{step.title}</h3>
-                      <p className="mt-3 text-sm leading-7 text-stone-600">{step.text}</p>
+                      <h3 className="mt-1 text-xl font-semibold text-ink">{t(step.title)}</h3>
+                      <p className="mt-3 text-sm leading-7 text-stone-600">{t(step.text)}</p>
                     </div>
                   </div>
                 </article>

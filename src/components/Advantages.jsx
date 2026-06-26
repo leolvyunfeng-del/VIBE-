@@ -1,8 +1,11 @@
 import { Check } from "lucide-react";
 import { advantages } from "../data/content.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Advantages() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-ink py-24 text-white sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
@@ -21,7 +24,7 @@ export default function Advantages() {
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded bg-ember text-ink">
                 <Check className="h-4 w-4" />
               </span>
-              <p className="text-base leading-7 text-white/78">{advantage}</p>
+              <p className="text-base leading-7 text-white/78">{t(advantage)}</p>
             </div>
           ))}
         </div>

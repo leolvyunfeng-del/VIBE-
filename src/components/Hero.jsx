@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
-import { ArrowDown, ArrowRight, Send } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowDown, ArrowRight, Send, Volume2, VolumeX } from "lucide-react";
 import { heroStats } from "../data/siteData.js";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import heroVideo from "../assets/media/market-signal-beijing-moscow.mp4";
 
 export default function Hero() {
   const { t } = useLanguage();
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleSound = () => {
+    const nextMuted = !isMuted;
+    setIsMuted(nextMuted);
+
+    if (videoRef.current) {
+      videoRef.current.muted = nextMuted;
+      if (!nextMuted) {
+        videoRef.current.play().catch(() => {});
+      }
+    }
+  };
 
   return (
     <section
@@ -69,21 +84,25 @@ export default function Hero() {
             </div>
             <div className="relative overflow-hidden border border-white/10 bg-carbon">
               <video
+                ref={videoRef}
                 className="h-56 w-full object-cover"
                 src={heroVideo}
                 autoPlay
-                muted
+                muted={isMuted}
                 loop
                 playsInline
                 controls={false}
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.2)_100%)]" />
-              <div className="absolute left-4 top-4 rounded bg-ink/80 px-3 py-1 text-xs text-white">
-                Beijing / Moscow
-              </div>
-              <p className="absolute bottom-4 left-4 right-4 text-xs text-white/72">
-                {t("地图视觉后续可替换为真实俄罗斯市场路径图")}
-              </p>
+              <button
+                type="button"
+                onClick={toggleSound}
+                className="absolute bottom-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded bg-ink/82 text-white shadow-sm backdrop-blur transition hover:bg-ember hover:text-ink"
+                aria-label={isMuted ? t("开启声音") : t("关闭声音")}
+                title={isMuted ? t("开启声音") : t("关闭声音")}
+              >
+                {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+              </button>
             </div>
           </div>
         </div>
