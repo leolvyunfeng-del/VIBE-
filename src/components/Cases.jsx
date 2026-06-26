@@ -1,5 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
-import { cases } from "../data/content.js";
+import { Link } from "react-router-dom";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { caseSummaries } from "../data/caseData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Cases() {
@@ -10,17 +11,25 @@ export default function Cases() {
           <SectionHeader
             eyebrow="Cases"
             title="案例展示"
-            description="我们围绕不同品类与增长目标，组合达人内容、平台投放、媒体传播和线下曝光，帮助品牌在俄罗斯市场形成可感知的声量。"
+            description="围绕不同品类与增长目标，组合达人内容、平台投放、媒体传播和线下曝光，帮助品牌在俄罗斯市场形成可感知的声量。"
           />
-          <p className="max-w-sm text-sm leading-7 text-stone-500">
-            建议真实案例补充：目标市场、核心挑战、渠道组合、执行周期、关键成果。
-          </p>
+          <Link
+            to="/cases/consumer-electronics"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-ember"
+          >
+            查看案例详情
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {cases.map((item, index) => (
-            <article key={item.title} className="group overflow-hidden bg-white shadow-sm">
-              <div className="case-visual relative h-56">
+        <div className="mt-14 flex gap-5 overflow-x-auto pb-4">
+          {caseSummaries.map((item, index) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="group min-w-[300px] overflow-hidden bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-sharp sm:min-w-[380px] lg:min-w-[31%]"
+            >
+              <div className="case-visual relative h-52">
                 <div className="absolute inset-0 bg-gradient-to-br from-ink via-carbon to-copper" />
                 <div className="absolute inset-0 opacity-70 mix-blend-screen case-lines" />
                 <div className="absolute left-6 top-6 rounded bg-white/12 px-3 py-1 text-xs font-semibold uppercase text-white">
@@ -40,15 +49,12 @@ export default function Cases() {
                     </span>
                   ))}
                 </div>
-                <button
-                  type="button"
-                  className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition group-hover:text-ember"
-                >
+                <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition group-hover:text-ember">
                   查看案例方向
                   <ArrowUpRight className="h-4 w-4" />
-                </button>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

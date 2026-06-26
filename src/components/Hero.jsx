@@ -1,5 +1,6 @@
-import { ArrowDown, ArrowRight, Send } from "lucide-react";
-import { heroStats } from "../data/content.js";
+import { Link } from "react-router-dom";
+import { ArrowDown, ArrowRight, MapPin, Send } from "lucide-react";
+import { heroStats } from "../data/siteData.js";
 
 export default function Hero() {
   return (
@@ -26,13 +27,13 @@ export default function Hero() {
             帮助中国品牌在俄罗斯建立认知、获取流量、沉淀信任。
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-2 rounded bg-ember px-6 py-4 font-semibold text-ink transition hover:bg-flame"
             >
               <Send className="h-5 w-5" />
               联系我们
-            </a>
+            </Link>
             <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 rounded border border-white/18 px-6 py-4 font-semibold text-white transition hover:border-white/38 hover:bg-white/8"
@@ -63,14 +64,22 @@ export default function Hero() {
               ))}
             </div>
             <div className="relative h-48 overflow-hidden border border-white/10 bg-carbon">
-              <div className="signal-grid absolute inset-0" />
-              <div className="absolute left-6 top-8 h-3 w-3 rounded-full bg-ember shadow-[0_0_36px_rgba(249,115,22,0.95)]" />
-              <div className="absolute right-12 top-16 h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_26px_rgba(255,255,255,0.9)]" />
-              <div className="absolute bottom-9 left-1/3 h-2.5 w-2.5 rounded-full bg-flame shadow-[0_0_26px_rgba(255,176,0,0.9)]" />
-              <div className="absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-ember to-transparent" />
+              <div className="hero-route-map absolute inset-0" />
+              <div className="absolute left-[18%] top-[30%] flex items-center gap-2 text-xs text-white/78">
+                <MapPin className="h-4 w-4 text-ember" />
+                Beijing
+              </div>
+              <div className="absolute right-[20%] top-[40%] flex items-center gap-2 text-xs text-white/78">
+                <MapPin className="h-4 w-4 text-ember" />
+                Moscow
+              </div>
+              <div className="absolute left-[27%] top-[43%] h-px w-[44%] rotate-[-8deg] bg-gradient-to-r from-ember via-flame to-white/70" />
               <div className="absolute bottom-5 left-6 text-xs uppercase text-white/45">
                 Moscow · SPB · Kazan · Novosibirsk
               </div>
+              <p className="absolute bottom-5 right-6 text-xs text-white/38">
+                地图视觉后续可替换为真实俄罗斯市场路径图
+              </p>
             </div>
           </div>
         </div>

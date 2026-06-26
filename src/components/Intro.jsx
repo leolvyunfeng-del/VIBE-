@@ -1,10 +1,10 @@
 import { CheckCircle2 } from "lucide-react";
-import { introPoints } from "../data/content.js";
+import { introPoints } from "../data/siteData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Intro() {
   return (
-    <section id="about" className="bg-porcelain py-24 sm:py-28">
+    <section id="about" className="bg-porcelain py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <SectionHeader
           eyebrow="Who We Are"

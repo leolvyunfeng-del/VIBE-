@@ -79,6 +79,18 @@ textarea {
   background-size: 84px 84px;
 }
 
+.hero-route-map {
+  background:
+    radial-gradient(circle at 18% 30%, rgba(249, 115, 22, 0.9), transparent 7px),
+    radial-gradient(circle at 80% 42%, rgba(255, 255, 255, 0.9), transparent 7px),
+    linear-gradient(115deg, transparent 49%, rgba(249, 115, 22, 0.85) 50%, transparent 51%),
+    linear-gradient(135deg, transparent 65%, rgba(255, 255, 255, 0.18) 66%, transparent 67%),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    #171717;
+  background-size: auto, auto, auto, auto, 28px 28px, 28px 28px, auto;
+}
+
 @media (max-width: 640px) {
   .hero-map::before {
     right: -16%;

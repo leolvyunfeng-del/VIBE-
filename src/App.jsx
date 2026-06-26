@@ -1,27 +1,26 @@
-import Advantages from "./components/Advantages.jsx";
-import Cases from "./components/Cases.jsx";
-import Contact from "./components/Contact.jsx";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
-import Hero from "./components/Hero.jsx";
-import Intro from "./components/Intro.jsx";
-import Market from "./components/Market.jsx";
-import Methodology from "./components/Methodology.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Services from "./components/Services.jsx";
+import CaseDetailPage from "./pages/CaseDetailPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import MarketDetailPage from "./pages/MarketDetailPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import ServiceDetailPage from "./pages/ServiceDetailPage.jsx";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-porcelain text-ink">
       <Navbar />
       <main>
-        <Hero />
-        <Intro />
-        <Market />
-        <Services />
-        <Methodology />
-        <Cases />
-        <Advantages />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/market/:slug" element={<MarketDetailPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailPage />} />
+          <Route path="/cases/:slug" element={<CaseDetailPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>

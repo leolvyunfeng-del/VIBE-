@@ -1,15 +1,15 @@
 import { Mail, MessageSquare, Send } from "lucide-react";
-import { contactChannels } from "../data/content.js";
+import { contactChannels } from "../data/siteData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
-export default function Contact() {
+export default function Contact({ compact = false }) {
   return (
     <section id="contact" className="bg-white py-24 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
         <div>
           <SectionHeader
             eyebrow="Contact"
-            title="联系我们"
+            title={compact ? "获取俄罗斯市场方案" : "联系我们"}
             description="告诉我们你的品牌、品类、目标和当前阶段，我们会基于俄罗斯市场给出初步沟通建议。"
           />
 
@@ -25,7 +25,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-stone-500">{channel.label}</p>
-                  <p className="mt-1 font-semibold text-ink">{channel.value}</p>
+                  {channel.href ? (
+                    <a href={channel.href} className="mt-1 block font-semibold text-ink hover:text-ember">
+                      {channel.value}
+                    </a>
+                  ) : (
+                    <p className="mt-1 font-semibold text-ink">{channel.value}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -72,7 +78,7 @@ export default function Contact() {
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded bg-ink px-6 py-4 font-semibold text-white transition hover:bg-ember hover:text-ink sm:w-auto"
           >
             <Send className="h-5 w-5" />
-            提交需求
+            预约项目沟通
           </button>
           <p className="mt-4 text-xs leading-6 text-stone-500">
             提交后我们会尽快与你确认需求，并安排俄罗斯市场顾问进行初步沟通。
