@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import { caseSummaries } from "../data/caseData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Cases() {
+  const { t } = useLanguage();
+
   return (
     <section id="cases" className="bg-porcelain py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -29,21 +32,21 @@ export default function Cases() {
                   Case 0{index + 1}
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-sm font-semibold text-ember">{item.eyebrow}</p>
-                  <h3 className="mt-2 text-2xl font-semibold leading-8 text-white">{item.title}</h3>
+                  <p className="text-sm font-semibold text-ember">{t(item.eyebrow)}</p>
+                  <h3 className="mt-2 text-2xl font-semibold leading-8 text-white">{t(item.title)}</h3>
                 </div>
               </div>
               <div className="p-6">
-                <p className="text-sm leading-7 text-stone-600">{item.text}</p>
+                <p className="text-sm leading-7 text-stone-600">{t(item.text)}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
                     <span key={tag} className="rounded bg-porcelain px-3 py-1 text-xs text-stone-600">
-                      {tag}
+                      {t(tag)}
                     </span>
                   ))}
                 </div>
                 <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition group-hover:text-ember">
-                  查看案例方向
+                  {t("查看案例方向")}
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
               </div>

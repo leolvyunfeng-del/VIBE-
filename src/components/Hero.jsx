@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowDown, ArrowRight, MapPin, Send } from "lucide-react";
+import { ArrowDown, ArrowRight, Send } from "lucide-react";
 import { heroStats } from "../data/siteData.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import heroVideo from "../assets/media/market-signal-beijing-moscow.mp4";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="top"
@@ -21,10 +25,10 @@ export default function Hero() {
             VIBE | Russia Go-to-Market Partner
           </div>
           <h1 className="max-w-5xl text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-            俄罗斯市场出海营销专家
+            {t("俄罗斯市场出海营销专家")}
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-9 text-white/72 sm:text-xl">
-            帮助中国品牌在俄罗斯建立认知、获取流量、沉淀信任。
+            {t("帮助中国品牌在俄罗斯建立认知、获取流量、沉淀信任。")}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
@@ -32,13 +36,13 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded bg-ember px-6 py-4 font-semibold text-ink transition hover:bg-flame"
             >
               <Send className="h-5 w-5" />
-              联系我们
+              {t("联系我们")}
             </Link>
             <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 rounded border border-white/18 px-6 py-4 font-semibold text-white transition hover:border-white/38 hover:bg-white/8"
             >
-              查看服务
+              {t("查看服务")}
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>
@@ -58,27 +62,27 @@ export default function Hero() {
                   key={stat.label}
                   className="flex items-center justify-between border border-white/10 bg-ink/36 px-4 py-4"
                 >
-                  <span className="text-sm text-white/58">{stat.label}</span>
-                  <span className="text-2xl font-bold text-white">{stat.value}</span>
+                  <span className="text-sm text-white/58">{t(stat.label)}</span>
+                  <span className="text-2xl font-bold text-white">{t(stat.value)}</span>
                 </div>
               ))}
             </div>
-            <div className="relative h-48 overflow-hidden border border-white/10 bg-carbon">
-              <div className="hero-route-map absolute inset-0" />
-              <div className="absolute left-[18%] top-[30%] flex items-center gap-2 text-xs text-white/78">
-                <MapPin className="h-4 w-4 text-ember" />
-                Beijing
+            <div className="relative overflow-hidden border border-white/10 bg-carbon">
+              <video
+                className="h-56 w-full object-cover"
+                src={heroVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls={false}
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.2)_100%)]" />
+              <div className="absolute left-4 top-4 rounded bg-ink/80 px-3 py-1 text-xs text-white">
+                Beijing / Moscow
               </div>
-              <div className="absolute right-[20%] top-[40%] flex items-center gap-2 text-xs text-white/78">
-                <MapPin className="h-4 w-4 text-ember" />
-                Moscow
-              </div>
-              <div className="absolute left-[27%] top-[43%] h-px w-[44%] rotate-[-8deg] bg-gradient-to-r from-ember via-flame to-white/70" />
-              <div className="absolute bottom-5 left-6 text-xs uppercase text-white/45">
-                Moscow · SPB · Kazan · Novosibirsk
-              </div>
-              <p className="absolute bottom-5 right-6 text-xs text-white/38">
-                地图视觉后续可替换为真实俄罗斯市场路径图
+              <p className="absolute bottom-4 left-4 right-4 text-xs text-white/72">
+                {t("地图视觉后续可替换为真实俄罗斯市场路径图")}
               </p>
             </div>
           </div>
@@ -89,7 +93,7 @@ export default function Hero() {
         href="#about"
         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-sm text-white/45 transition hover:text-white md:flex"
       >
-        向下了解
+        {t("向下了解")}
         <ArrowDown className="h-4 w-4" />
       </a>
     </section>

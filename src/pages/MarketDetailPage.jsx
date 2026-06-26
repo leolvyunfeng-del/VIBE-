@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import CTASection from "../components/CTASection.jsx";
 import MetricCard from "../components/MetricCard.jsx";
 import PageHero from "../components/PageHero.jsx";
@@ -7,6 +8,7 @@ import { marketOpportunities } from "../data/marketData.js";
 
 export default function MarketDetailPage() {
   const { slug } = useParams();
+  const { t } = useLanguage();
   const market = marketOpportunities.find((item) => item.slug === slug);
 
   if (!market) {
@@ -32,11 +34,11 @@ export default function MarketDetailPage() {
           </div>
 
           <div className="mt-10 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-ink">数据来源区域</h2>
+            <h2 className="text-xl font-semibold text-ink">{t("数据来源区域")}</h2>
             <div className="mt-4 flex flex-wrap gap-2">
               {market.sources.map((source) => (
                 <span key={source} className="rounded bg-porcelain px-3 py-2 text-sm text-stone-600">
-                  {source}
+                  {t(source)}
                 </span>
               ))}
             </div>
@@ -44,16 +46,16 @@ export default function MarketDetailPage() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/" className="rounded border border-stone-300 px-5 py-3 font-semibold text-ink hover:border-ember">
-              返回首页
+              {t("返回首页")}
             </Link>
             <Link to="/contact" className="rounded bg-ember px-5 py-3 font-semibold text-ink hover:bg-flame">
-              联系我们
+              {t("联系我们")}
             </Link>
             <Link
               to="/services/market-strategy"
               className="inline-flex items-center gap-2 rounded bg-ink px-5 py-3 font-semibold text-white hover:bg-carbon"
             >
-              查看市场策略服务
+              {t("查看市场策略服务")}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -66,18 +68,19 @@ export default function MarketDetailPage() {
 }
 
 function InfoBlock({ title, items, ordered = false }) {
+  const { t } = useLanguage();
   const List = ordered ? "ol" : "ul";
 
   return (
     <div className="bg-white p-6 shadow-sm">
-      <h2 className="text-xl font-semibold text-ink">{title}</h2>
+      <h2 className="text-xl font-semibold text-ink">{t(title)}</h2>
       <List className="mt-5 space-y-3 text-sm leading-7 text-stone-600">
         {items.map((item, index) => (
           <li key={item} className="flex gap-3">
-              <span className="mt-2.5 grid h-5 w-5 shrink-0 place-items-center rounded bg-ember text-xs font-bold text-ink">
+            <span className="mt-2.5 grid h-5 w-5 shrink-0 place-items-center rounded bg-ember text-xs font-bold text-ink">
               {ordered ? index + 1 : ""}
             </span>
-            <span>{item}</span>
+            <span>{t(item)}</span>
           </li>
         ))}
       </List>

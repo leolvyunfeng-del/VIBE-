@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import { services } from "../data/serviceData.js";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="bg-porcelain py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,10 +31,10 @@ export default function Services() {
                   </div>
                   <span className="h-px w-20 bg-mist group-hover:bg-ember" />
                 </div>
-                <h3 className="text-xl font-semibold leading-7 text-ink">{service.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-stone-600">{service.short}</p>
+                <h3 className="text-xl font-semibold leading-7 text-ink">{t(service.title)}</h3>
+                <p className="mt-4 text-sm leading-7 text-stone-600">{t(service.short)}</p>
                 <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition group-hover:text-ember">
-                  查看服务详情
+                  {t("查看服务详情")}
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </span>
               </Link>
