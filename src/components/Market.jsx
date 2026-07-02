@@ -19,20 +19,6 @@ export default function Market() {
           />
         </div>
 
-        <div className="mt-14 border-y border-white/12 py-10">
-          <h3 className="text-3xl font-semibold text-white sm:text-4xl">{t("营销路径")}</h3>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <Link to="/market/social-content" className="border border-white/12 bg-white/8 p-6 transition hover:border-ember">
-              <p className="text-3xl font-bold text-ember">{t("社媒")}</p>
-              <p className="mt-3 text-sm leading-6 text-white/58">{t("内容、社群和达人共同影响用户决策")}</p>
-            </Link>
-            <Link to="/market/ecommerce" className="border border-white/12 bg-white/8 p-6 transition hover:border-ember">
-              <p className="text-3xl font-bold text-ember">{t("电商")}</p>
-              <p className="mt-3 text-sm leading-6 text-white/58">{t("搜索、口碑和站内外投放共同驱动转化")}</p>
-            </Link>
-          </div>
-        </div>
-
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {marketOpportunities.map((item) => {
             const Icon = item.icon;
