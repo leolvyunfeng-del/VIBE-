@@ -2,6 +2,19 @@ import { Building2, CircleDollarSign, Newspaper, Search, Share2, Users } from "l
 
 export const services = [
   {
+    slug: "market-strategy",
+    path: "/services/market-strategy",
+    icon: Search,
+    title: "市场调研与本地化策略",
+    short: "研究竞品、用户、渠道和价格带，输出品牌定位、内容方向与进入市场路径。",
+    clients: "适合首次进入俄罗斯市场、准备新品上市、需要验证品类机会或调整本地化定位的品牌。",
+    work: ["市场与竞品研究", "用户画像分析", "渠道组合建议", "本地化卖点和内容策略"],
+    process: ["问题定义", "资料收集", "竞品拆解", "用户洞察", "策略输出", "落地计划"],
+    deliverables: ["市场研究报告", "竞品矩阵", "用户画像", "渠道建议", "进入市场路线图"],
+    metrics: ["品类机会", "价格带", "渠道优先级", "内容主题", "风险清单"],
+    relatedCases: ["consumer-electronics", "ooh-advertising", "ota-kol"]
+  },
+  {
     slug: "kol-koc",
     path: "/services/kol-koc",
     icon: Users,
@@ -52,19 +65,6 @@ export const services = [
     deliverables: ["点位推荐表", "媒体报价", "上刊排期", "现场照片", "结案报告"],
     metrics: ["OTS", "覆盖城市", "上刊周期", "估算 CPM", "话题浏览量"],
     relatedCases: ["ooh-advertising"]
-  },
-  {
-    slug: "market-strategy",
-    path: "/services/market-strategy",
-    icon: Search,
-    title: "市场调研与本地化策略",
-    short: "研究竞品、用户、渠道和价格带，输出品牌定位、内容方向与进入市场路径。",
-    clients: "适合首次进入俄罗斯市场、准备新品上市、需要验证品类机会或调整本地化定位的品牌。",
-    work: ["市场与竞品研究", "用户画像分析", "渠道组合建议", "本地化卖点和内容策略"],
-    process: ["问题定义", "资料收集", "竞品拆解", "用户洞察", "策略输出", "落地计划"],
-    deliverables: ["市场研究报告", "竞品矩阵", "用户画像", "渠道建议", "进入市场路线图"],
-    metrics: ["品类机会", "价格带", "渠道优先级", "内容主题", "风险清单"],
-    relatedCases: ["consumer-electronics", "ooh-advertising", "ota-kol"]
   },
   {
     slug: "pr-branding",

@@ -6,6 +6,7 @@ import CaseDetailPage from "./pages/CaseDetailPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import MarketDetailPage from "./pages/MarketDetailPage.jsx";
+import NewsPage from "./pages/NewsPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import ServiceDetailPage from "./pages/ServiceDetailPage.jsx";
 
@@ -17,6 +18,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/news" element={<NewsPage />} />
           <Route path="/market/:slug" element={<MarketDetailPage />} />
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/cases/:slug" element={<CaseDetailPage />} />

@@ -13,7 +13,7 @@ export default function Services() {
         <SectionHeader
           eyebrow="Services"
           title="我们的服务"
-          description="以俄罗斯本土渠道和中文团队协作能力为基础，帮助品牌完成从策略、内容、传播到效果复盘的全链路执行。"
+          description="以俄罗斯本地化资源为基础，帮助品牌完成从策略、内容、传播到效果复盘的全链路执行。"
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

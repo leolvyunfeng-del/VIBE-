@@ -1,5 +1,4 @@
 import casesHome from "../assets/cases/cases-home.png";
-import case3cJpDe from "../assets/cases/case-3c-jp-de.png";
 import case3cRu from "../assets/cases/case-3c-ru.png";
 import caseBeauty from "../assets/cases/case-beauty.png";
 import caseGameIp from "../assets/cases/case-game-ip.png";
@@ -62,22 +61,6 @@ export const caseDetails = [
     description: "通过达人测评、内容种草和本地平台传播，帮助消费电子品牌在目标市场建立认知和信任。",
     relatedServices: ["kol-koc", "social-media", "performance-ads"],
     sections: [
-      {
-        title: "某知名户外电子品牌 JP / DE 红人推广",
-        label: "JP DE-红人推广",
-        image: case3cJpDe,
-        background: "以日本以及德国为主要市场，通过种草 / 测评提高品牌在当地的知名度。",
-        work: [
-          "筛选骑行、潜水、滑雪、登山等户外博主。",
-          "发布推广种草及竞品横向评测视频。",
-          "覆盖 TikTok、YouTube、Instagram 等平台。"
-        ],
-        metrics: [
-          { value: "120w+", label: "曝光量" },
-          { value: "1w+", label: "互动量" }
-        ],
-        result: "通过真实户外场景内容建立产品可信度，并提升品牌在垂直圈层中的讨论度。"
-      },
       {
         title: "某知名耳机麦克风品牌 RU 红人推广",
         label: "RU-红人推广",

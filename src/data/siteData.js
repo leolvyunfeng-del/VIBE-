@@ -1,4 +1,5 @@
 export const navItems = [
+  { label: "资讯页", to: "/news" },
   { label: "我们是谁", to: "/#about" },
   { label: "市场机会", to: "/#market" },
   { label: "服务", to: "/#services" },
@@ -14,8 +15,8 @@ export const heroStats = [
 
 export const introPoints = [
   "为中国品牌提供进入俄罗斯市场的整合营销解决方案",
-  "覆盖 KOL/KOC、社媒、广告投放、线下媒体、PR 与本地化咨询",
-  "以市场洞察为起点，帮助品牌完成从流量获取到本地信任建立"
+  "以市场洞察为起点，帮助品牌完成从流量获取到本地信任建立",
+  "覆盖 KOL/KOC、社媒、广告投放、线下媒体、PR 与本地化咨询"
 ];
 
 export const contactChannels = [

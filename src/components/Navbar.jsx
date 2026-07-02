@@ -10,12 +10,8 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/88 text-white backdrop-blur-xl">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3" aria-label={t("VIBE 首页")}>
-          <span className="grid h-9 w-9 place-items-center rounded bg-ember font-black text-ink">
-            V
-          </span>
-          <span className="leading-tight">
-            <span className="block text-base font-bold">VIBE</span>
-            <span className="block text-xs text-white/55">Russia Marketing</span>
+          <span className="grid h-9 min-w-16 place-items-center rounded bg-ember px-3 text-sm font-black tracking-wide text-ink">
+            VIBE
           </span>
         </Link>
 
