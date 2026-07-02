@@ -7,7 +7,7 @@ export default function Navbar() {
   const { lang, toggleLanguage, t } = useLanguage();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/88 text-white backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink text-white shadow-sm">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3" aria-label={t("VIBE 首页")}>
           <span className="grid h-9 min-w-16 place-items-center rounded bg-ember px-3 text-sm font-black tracking-wide text-ink">

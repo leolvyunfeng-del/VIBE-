@@ -8,9 +8,9 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { value: "RU", label: "俄罗斯市场深耕" },
-  { value: "KOL", label: "达人与内容资源" },
-  { value: "全流程", label: "策略到复盘闭环" }
+  { label: "深耕俄罗斯市场" },
+  { label: "本土达人与资源储备" },
+  { label: "全案营销-品效合一" }
 ];
 
 export const introPoints = [

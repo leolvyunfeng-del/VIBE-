@@ -29,9 +29,9 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { value: "RU", label: "俄罗斯市场深耕" },
-  { value: "KOL", label: "达人与内容资源" },
-  { value: "360", label: "策略到复盘闭环" }
+  { label: "深耕俄罗斯市场" },
+  { label: "本土达人与资源储备" },
+  { label: "全案营销-品效合一" }
 ];
 
 export const introPoints = [
@@ -53,12 +53,12 @@ export const marketOpportunities = [
   },
   {
     icon: Globe2,
-    title: "本土平台生态清晰",
+    title: "平台集中度高",
     text: "Yandex、VK Ads、本地媒体与线下广告体系成熟，品牌可以用更本地化的组合提升投放效率。"
   },
   {
     icon: Handshake,
-    title: "中国品牌接受度提升",
+    title: "轻工业品类市场缺口释放",
     text: "3C、游戏、消费品、汽车配件等品类在俄罗斯市场认知提升，品牌需要更系统地建立信任与差异化。"
   }
 ];
@@ -67,7 +67,7 @@ export const services = [
   {
     icon: Users,
     title: "俄罗斯 KOL/KOC 营销",
-    text: "达人筛选、报价谈判、内容共创、发布执行与效果复盘，匹配品牌品类和目标客群。"
+    text: "达人筛选、内容共创、发布执行与效果复盘，匹配品牌品类和目标客群。"
   },
   {
     icon: Share2,

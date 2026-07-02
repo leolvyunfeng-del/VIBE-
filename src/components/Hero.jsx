@@ -67,18 +67,14 @@ export default function Hero() {
           <div className="border border-white/14 bg-white/8 p-5 shadow-sharp backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-white/12 pb-4">
               <span className="text-sm font-semibold text-white/82">Market Signal</span>
-              <span className="rounded bg-ember/18 px-2 py-1 text-xs font-semibold text-flame">
-                LIVE
-              </span>
             </div>
             <div className="grid gap-4 py-5">
               {heroStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex items-center justify-between gap-5 border border-white/10 bg-ink/36 px-4 py-4"
+                  className="grid min-h-20 place-items-center border border-white/10 bg-ink/36 px-4 py-4 text-center"
                 >
                   <span className="text-xl font-bold leading-tight text-white sm:text-2xl">{t(stat.label)}</span>
-                  <span className="min-w-20 text-right text-xl font-bold leading-tight text-white sm:text-2xl">{t(stat.value)}</span>
                 </div>
               ))}
             </div>

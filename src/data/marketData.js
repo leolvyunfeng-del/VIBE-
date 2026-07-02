@@ -55,8 +55,8 @@ export const marketOpportunities = [
     slug: "local-platforms",
     path: "/market/local-platforms",
     icon: Globe2,
-    title: "本土平台生态清晰",
-    short: "Yandex、VK Ads、本地媒体与线下广告体系成熟，品牌可以用更本地化的组合提升投放效率。",
+    title: "平台集中度高",
+    short: "俄罗斯核心流量集中在 Yandex、VK、Telegram 等本土平台，品牌需要理解平台规则、广告机制与用户触点，否则容易出现渠道选择失焦、投放效率低等问题。",
     conclusion: "本土平台不是备用渠道，而是俄罗斯市场增长系统的核心组成。",
     metrics: [
       { value: "70.57%", label: "Yandex 搜索份额", source: "来源：StatCounter 2026 年 5 月俄罗斯搜索市场" },
@@ -80,7 +80,7 @@ export const marketOpportunities = [
     slug: "chinese-brands",
     path: "/market/chinese-brands",
     icon: Handshake,
-    title: "中国品牌接受度提升",
+    title: "轻工业品类市场缺口释放",
     short: "3C、游戏、消费品、汽车配件等品类在俄罗斯市场认知提升，品牌需要更系统地建立信任与差异化。",
     conclusion: "俄罗斯用户对中国品牌的认知正在从价格导向转向品质、体验和信任判断。",
     metrics: [

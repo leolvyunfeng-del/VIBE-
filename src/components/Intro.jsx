@@ -12,7 +12,7 @@ export default function Intro() {
         <SectionHeader
           eyebrow="Who We Are"
           title="我们是谁"
-          description="VIBE 是一家专注俄罗斯市场的出海营销服务团队，为计划进入或正在深耕俄罗斯的中国品牌，提供从市场策略到营销执行的一体化支持。"
+          description="VIBE 专注于中国品牌出海俄罗斯市场，具备本地化市场洞察、优质媒介/KOL资源整合、内容策略与项目执行能力。我们为计划进入或正在深耕俄罗斯的品牌，提供从市场策略到营销落地的一体化服务，帮助品牌降低试错成本，提升市场进入效率与传播效果。"
         />
 
         <div className="grid gap-5">
